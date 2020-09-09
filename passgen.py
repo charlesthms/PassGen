@@ -26,4 +26,5 @@ def password_generator(lenght=11):
 
     return password
 
-print(password_generator())
+if __name__ == "__main__":
+    print(password_generator())
