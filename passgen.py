@@ -3,22 +3,22 @@ import random
 
 
 #CONSTANTES
-letters = string.ascii_letters
-numbers = string.digits.split('5')[random.randint(0,1)]
-punct = string.punctuation.split('.')[random.randint(0,1)]
-repertory = f'{letters}{numbers}{punct}'
+LETTERS = string.ascii_letters
+NUMBERS = string.digits.split('5')[random.randint(0,1)]
+PUNCT = string.punctuation.split('.')[random.randint(0,1)]
+REPERTORY = f'{LETTERS}{NUMBERS}{PUNCT}'
 
 
 def password_generator(lenght=11):
     """Generate a password from a repertory.
 
     Args:
-        lenght (int, optional): Lenght of the password. Defaults to 11.
+        lenght (int, optional): Lenght of the password. Default to 11.
 
     Returns:
         str: Generated password
     """
-    lst = list(repertory)
+    lst = list(REPERTORY)
     random.shuffle(lst)
 
     password = random.choices(lst, k=lenght)
